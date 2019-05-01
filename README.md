@@ -16,7 +16,7 @@ Install with composer
 
 ## Usage
 
-Wrap any instance of [```\Psr\Http\Client\ClientInterface```](https://github.com/php-fig/http-client/blob/master/src/ClientInterface.php) with the [```\Slepic\Psr\Http\ObservingClient\ObservingClient```](https://github.com/slepic/psr-http-oberving-client/blob/master/src/ObservingClient.php) and pass it a [```\Slepic\Http\Transfer\Observer\ObserverInterface```](https://github.com/slepic/http-transfer/blob/master/src/Observer/ObserverInterface.php).
+Wrap any instance of [```\Psr\Http\Client\ClientInterface```](https://github.com/php-fig/http-client/blob/master/src/ClientInterface.php) with the [```\Slepic\Psr\Http\ObservingClient\ObservingClient```](https://github.com/slepic/psr-http-observing-client/blob/master/src/ObservingClient.php) and pass it a [```\Slepic\Http\Transfer\Observer\ObserverInterface```](https://github.com/slepic/http-transfer/blob/master/src/Observer/ObserverInterface.php).
 
 If you now send all your requests through the ObservingClient, the observer will be notified about start and end of all the transfers.
 

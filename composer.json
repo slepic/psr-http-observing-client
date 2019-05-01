@@ -23,7 +23,8 @@
         "slepic/http-transfer-observer-implementation": "See existing observers to plug in your psr http client."
     },
     "provide": {
-        "psr/http-client-implementation": "^1.0"
+        "psr/http-client-implementation": "^1.0",
+        "slepic/http-transfer-observer-consumer": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

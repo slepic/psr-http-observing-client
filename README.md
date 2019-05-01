@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/slepic/psr-http-observing-client.svg?branch=master)](https://travis-ci.org/slepic/psr-http-observing-client)
-[![Style Status](https://styleci.io/repos/183834781/shield)](https://styleci.io/repos/183834781)
+[![Style Status](https://styleci.io/repos/184448040/shield)](https://styleci.io/repos/184448040)
 
 # psr-http-observing-client
 PSR ClientInterface implementation that wraps another implementation and observes the transfers using ObserverInterfce from slepic/http-transfer package.

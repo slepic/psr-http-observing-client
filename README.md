@@ -1,24 +1,25 @@
-[![Build Status](https://travis-ci.org/slepic/php-template.svg?branch=master)](https://travis-ci.org/slepic/php-template)
+[![Build Status](https://travis-ci.org/slepic/psr-http-observing-client.svg?branch=master)](https://travis-ci.org/slepic/psr-http-observing-client)
 [![Style Status](https://styleci.io/repos/183834781/shield)](https://styleci.io/repos/183834781)
 
-# php-template
-Template rendering abstraction library. Abstract your libraries from specific templating engines.
-
-This library provides the [```TemplateInterface```](https://github.com/slepic/php-template/blob/master/src/TemplateInterface.php), which is the abstraction of any data rendering template.
-And it also provides one simple implementation called [```OutputBufferTemplate```](https://github.com/slepic/php-template/blob/master/src/OutputBufferTemplate.php), which renders the data using another PHP script and PHP ob_* functions.
+# psr-http-observing-client
+PSR ClientInterface implementation that wraps another implementation and observes the transfers using ObserverInterfce from slepic/http-transfer package.
 
 ## Requirements
 
-PHP 5.6 or 7
+PHP 7
 
 ## Installation
 
 Install with composer
 
-```composer require slepic/php-template```
+```composer require slepic/psr-http-observing-client```
 
-## Contribution
+## Usage
 
-If you create a library that depends on this one and you use composer, please consider the following:
-* If you implement the ```TemplateInterface```, please place [```slepic/php-template-implementation```](https://packagist.org/providers/slepic/php-template-implementation) in the provide section of your ```composer.json```.
-* If you consume the ```TemplateInterface```, please place [```slepic/php-template-consumer```](https://packagist.org/providers/slepic/php-template-consumer) in the provide section of your ```composer.json```.
+Wrap any instance of ```\Psr\Http\Client\ClientInterface``` with ```\Slepic\Psr\Http\ObservingClient\ObservingClient``` and pass it a ```\Slepic\Http\Transfer\Observer\ObserverInterface```.
+
+If you now send all your requests through the ObservingClient, the observer will be notified about start and end of all the transfers.
+
+## Observers
+
+See [```slepic/http-transfer-observer-implementation```] for list of existing observers.

@@ -22,7 +22,8 @@ If you now send all your requests through the ObservingClient, the observer will
 
 See an example where we use [```\Slepic\Http\Transfer\History\HistoryObserver```](https://github.com/slepic/http-transfer/blob/master/src/History/HistoryObserver.php) to log requests and responses with timing.
 ```
-$observer = new HistoryObserver(new ArrayStorage());
+$storage = new ArrayStorage();
+$observer = new HistoryObserver($storage);
 $psrClient = new SomePsrClient();
 $client = new ObservingClient($psrClient, $observer);
 
